@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node server"
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "npx prisma migrate dev",
+    "studio": "npx prisma studio"
   },
   "repository": {
     "type": "git",
@@ -18,9 +20,11 @@
   },
   "homepage": "https://github.com/ryugibo/nomadcoffee-backend#readme",
   "dependencies": {
+    "@prisma/client": "^3.14.0",
     "apollo-server": "^2.25.2",
     "dotenv": "^16.0.1",
-    "graphql": "^15.4.0"
+    "graphql": "^15.4.0",
+    "graphql-tools": "^7.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.18.0",
