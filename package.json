@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "dependencies": {
     "apollo-server": "^2.25.2",
     "graphql": "^15.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
