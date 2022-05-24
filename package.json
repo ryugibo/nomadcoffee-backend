@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ryugibo/nomadcoffee-backend#readme",
   "dependencies": {
     "apollo-server": "^2.25.2",
+    "dotenv": "^16.0.1",
     "graphql": "^15.4.0"
   },
   "devDependencies": {
