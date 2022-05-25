@@ -1,6 +1,10 @@
 import { gql } from "apollo-server";
 
 export default gql`
+  type Response {
+    ok: Boolean!
+    error: String
+  }
   type User {
     id: Int!
     username: String!
@@ -19,7 +23,7 @@ export default gql`
       location: String
       avatarURL: String
       githubUsername: String
-    ): User
+    ): Response
   }
   type Query {
     seeProfile(username: String!): User
