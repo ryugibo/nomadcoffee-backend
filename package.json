@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node server",
+    "preinstall": "npx npm-force-resolutions@0.0.3",
+    "dev": "nodemon --exec babel-node server --delay 2",
     "migrate": "npx prisma migrate dev",
-    "studio": "npx prisma studio"
+    "studio": "npx prisma studio",
+    "postgresql_status": "sudo service postgresql status",
+    "postgresql_start": "sudo service postgresql start",
+    "postgresql_stop": "sudo service postgresql stop"
   },
   "repository": {
     "type": "git",
@@ -22,10 +26,14 @@
   "dependencies": {
     "@prisma/client": "^3.14.0",
     "apollo-server": "^2.25.2",
+    "apollo-server-express": "^2.19.2",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.1",
+    "express": "^4.18.1",
     "graphql": "^15.4.0",
-    "graphql-tools": "^7.0.2"
+    "graphql-tools": "^7.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.0",
@@ -33,5 +41,9 @@
     "@babel/preset-env": "^7.18.0",
     "nodemon": "^2.0.16",
     "prisma": "^3.14.0"
+  },
+  "resolutions": {
+    "fs-capacitor": "^6.2.0",
+    "graphql-upload": "^11.0.0"
   }
 }
