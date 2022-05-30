@@ -9,5 +9,7 @@ export default gql`
     location: String
     avatarURL: String
     githubUsername: String
+    followers: [User]
+    following: [User]
   }
 `;
