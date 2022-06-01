@@ -21,14 +21,15 @@ export default {
           return { ok: false, error: "CoffeeShop not found." };
         }
 
-        // let photoURLs = [];
-        // if (photos && photos.length > 0) {
-        //   photoURLs = await Promise.all(
-        //     photos.map((photo) => {
-        //       return Upload(photo, `${loggedInUser.id}-`);
-        //     })
-        //   );
-        // }
+        let photoURLs = [];
+        if (photos && photos.length > 0) {
+          photoURLs = await Promise.all(
+            photos.map((photo) => {
+              return Upload(photo, `${loggedInUser.id}-`);
+            })
+          );
+        }
+        console.log(oldCoffeeShop.photos, photoURLs);
 
         await client.coffeeShop.update({
           where: { id },
@@ -36,6 +37,15 @@ export default {
             name,
             latitude,
             longitude,
+            photos: {
+              disconnect: oldCoffeeShop.photos,
+              connectOrCreate: photoURLs.map((photoURL) => {
+                return {
+                  where: { url: photoURL },
+                  create: { url: photoURL },
+                };
+              }),
+            },
             categories: {
               disconnect: oldCoffeeShop.categories,
               connectOrCreate: categories.map((category) => {
