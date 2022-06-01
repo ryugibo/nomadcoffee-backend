@@ -27,7 +27,7 @@ model User {
 model CoffeeShop {
   id         Int               @id @default(autoincrement())
   name       String
-  latitide   String
+  latitude   String
   longitude  String
   user       User              @relation(fields: [userId], references: [id])
   userId     Int
