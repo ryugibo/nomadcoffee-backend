@@ -44,7 +44,7 @@ model CoffeeShopPhoto {
 
 model Category {
   id    Int          @id @default(autoincrement())
-  name  String
-  slug  String
+  name  String       @unique
+  slug  String?
   shops CoffeeShop[]
 }
