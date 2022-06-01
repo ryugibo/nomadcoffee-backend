@@ -8,7 +8,7 @@ export default gql`
     longitude: String!
     user: User!
     photos: [CoffeeShopPhoto]
-    categories: [Categoty]
+    categories: [Category]
   }
   type CoffeeShopPhoto {
     id: Int!
