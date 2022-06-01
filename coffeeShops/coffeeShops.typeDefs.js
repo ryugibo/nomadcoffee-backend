@@ -19,7 +19,7 @@ export default gql`
     id: Int!
     name: String!
     slug: String!
-    shops: [CoffeeShop]
+    shops(page: Int!): [CoffeeShop]
     totalShops: Int
   }
 `;
