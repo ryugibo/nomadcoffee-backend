@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 import client from "../../client";
 import { protectedResolver } from "../users.utils";
-import { Upload } from "./editProfile.utils";
+import { Upload } from "../../utils";
 
 const editProfileFn = async (
   _,

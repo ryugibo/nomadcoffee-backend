@@ -40,6 +40,8 @@ model CoffeeShopPhoto {
   url          String
   shop         CoffeeShop @relation(fields: [coffeeShopId], references: [id])
   coffeeShopId Int
+
+  @@unique([url, coffeeShopId])
 }
 
 model Category {

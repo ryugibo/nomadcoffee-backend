@@ -18,7 +18,7 @@ export default gql`
   type Category {
     id: Int!
     name: String!
-    slug: String!
+    slug: String
     shops(page: Int!): [CoffeeShop]
     totalShops: Int
   }
