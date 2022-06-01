@@ -1,4 +1,5 @@
 import { createWriteStream } from "fs";
+
 export const Upload = async (avatar, prefix) => {
   let Path = null;
   if (JSON.parse(process.env.UPLOAD_USE_LOCAL_STATIC)) {
