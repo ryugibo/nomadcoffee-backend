@@ -16,5 +16,5 @@
   - [x] seeCoffeeShops should list all the CoffeeShop with pagination.
   - [x] seeCoffeeShop should get a CoffeeShop by id.
   - [x] seeCategory should list all the CoffeeShop inside of a Category with pagination.
-  - [ ] seeCategories should list all the Category and should have a totalShops computed field that counts all the CoffeeShop inside of the Category, it should also have pagination
+  - [x] seeCategories should list all the Category and should have a totalShops computed field that counts all the CoffeeShop inside of the Category, it should also have pagination
   - [ ] editCoffeeShop should edit a CoffeeShop
