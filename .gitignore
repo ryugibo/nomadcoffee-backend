@@ -131,3 +131,6 @@ dist
 
 # Local static files
 uploads/
+
+# built files
+build/

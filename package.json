@@ -10,7 +10,9 @@
     "studio": "npx prisma studio",
     "postgresql_status": "sudo service postgresql status",
     "postgresql_start": "sudo service postgresql start",
-    "postgresql_stop": "sudo service postgresql stop"
+    "postgresql_stop": "sudo service postgresql stop",
+    "build": "babel src --out-dir build",
+    "start": "node build/server"
   },
   "repository": {
     "type": "git",
